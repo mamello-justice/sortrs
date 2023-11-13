@@ -1,0 +1,5 @@
+[licenses]
+unlicensed = "warn"
+allow = [
+    "MIT"
+]

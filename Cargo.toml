@@ -2,6 +2,10 @@
 name = "sortrs"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "Sorting algorithms in Rust"
+repository = "https://github.com/mamello-justice/sortrs"
+authors = ["Mamello Seboholi"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
