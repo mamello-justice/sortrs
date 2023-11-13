@@ -1,0 +1,19 @@
+name: Lint & Formatting
+
+on:
+    push:
+        branches: main
+
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - run: rustup component add clippy
+            - uses: actions-rs/clippy-check@v1
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+                args: --all-targets --all-features
+            - run: |
+                cargo install --locked cargo-deny && cargo deny check
+                cargo fmt --all -- --check
